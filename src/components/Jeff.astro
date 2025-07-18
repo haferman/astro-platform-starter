@@ -1,92 +1,13 @@
 ---
+import Intro from './Intro.astro';
+import HafermanCarpet from './HafermanCarpet.astro';
+import ErdosNumber from './ErdosNumber.astro';
+import LBAM from './LBAM.astro';
 ---
+
 <section id="about" class="max-w-6xl mx-auto px-4 py-12 space-y-16">
-
-  <!-- Intro Section with Portrait -->
-  <div class="text-center space-y-4">
-    <img
-      src="/jeff-haferman-768x768.jpg"
-      alt="Jeff Haferman"
-      class="rounded-full mx-auto w-40 h-40 object-cover shadow-lg"
-    />
-    <h1 class="text-4xl font-bold">Jeff Haferman</h1>
-    <p class="text-lg text-gray-400">Researcher, innovator, and advocate for science, policy, and people.</p>
-  </div>
-
-  <!-- Haferman Carpet -->
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-    <div class="prose">
-      <h3 class="text-2xl font-semibold mb-2">Haferman Carpet</h3>
-      <p>
-        This is the “Haferman Carpet” by Jeff Haferman. It is a fractal I put together as part of a homework problem when I was an undergraduate at the University of Chicago, probably around 1984.
-        There is a nice description of this fractal at <a href="https://mathworld.wolfram.com/HafermanCarpet.html" class="text-blue-600 underline">Wolfram Mathworld</a>.
-        My professor at the time was Jeffrey Shallit.
-        A colorized version of the carpet appears on the cover of the book <em>Automatic Sequences</em> by Allouche and Shallit.
-        For the very mathematically inclined, there is an entry on the Haferman Carpet in the <a href="https://oeis.org" class="text-blue-600 underline">Online Encyclopedia of Integer Sequences</a>.
-      </p>
-    </div>
-    <div class="flex justify-center">
-      <figure class="text-center">
-        <img
-          src="/haferman-carpet5-2.gif"
-          alt="Haferman Carpet fractal"
-          class="rounded-lg shadow-lg w-full max-w-md mx-auto"
-        />
-        <figcaption class="text-sm mt-2 text-gray-500">Haferman Carpet at 5 iterations</figcaption>
-      </figure>
-    </div>
-  </div>
-
-<!-- Erdös Number -->
-<div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center md:flex-row-reverse">
-  <div class="flex justify-center">
-    <figure class="text-center">
-      <div class="w-48 h-48 overflow-hidden rounded shadow mx-auto">
-        <img
-          src="/kevin-bacon-med-300x265.png"
-          alt="Kevin Bacon"
-          class="object-cover w-full h-full"
-        />
-      </div>
-      <figcaption class="text-sm mt-2 text-gray-500">Still working on my Erdös-Bacon number…</figcaption>
-    </figure>
-  </div>
-  <div class="prose">
-    <h3 class="text-2xl font-semibold mb-2">Erdös Number</h3>
-    <p>
-      My Erdös Number is 4 (I co-authored a paper with Benjamin Kedem, who co-authored with Eric V. Slud, who co-authored with Robert W. Chen, who co-authored with Paul Erdös).
-      I do not yet have an Erdös–Bacon number.
-      My <a href="https://scholar.google.com" class="text-blue-600 underline">Google Scholar</a> citations page lists most of my academic writings.
-      <a href="/CV.pdf" class="text-blue-600 underline">Here is a link to my CV.</a>
-    </p>
-  </div>
-</div>
-
-  <!-- LBAM -->
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-    <div class="prose">
-      <h3 class="text-2xl font-semibold mb-2">Light Brown Apple Moth (LBAM)</h3>
-      <p>
-        The “Light Brown Apple Moth” (LBAM) controversy is described in this <a href="https://en.wikipedia.org/wiki/Light_Brown_Apple_Moth" class="text-blue-600 underline">Wikipedia article</a>.
-        My short (and perhaps biased) account: the U.S. EPA and California Department of Food and Agriculture believed the LBAM would infest California and destroy crops.
-        Aerial spraying of a supposedly “non‑toxic” pesticide was authorized, and two sprayings took place in late 2007 over populated areas in Monterey County.
-      </p>
-      <p>
-        I co‑wrote a paper with Dr. Dennis Knepp showing that the number of small particles in the spray was a health hazard.
-        The CDFA lost a couple of lawsuits and abandoned the program, and to date, there has been no significant crop damage from the LBAM.
-        A PDF version of our analysis (and related correspondence) is archived <a href="/LBAM-analysis.pdf" class="text-blue-600 underline">here</a>.
-      </p>
-    </div>
-    <div class="flex justify-center">
-      <figure class="text-center">
-        <img
-          src="/lbam-med-1.png"
-          alt="Light Brown Apple Moth"
-          class="rounded-lg shadow w-full max-w-md mx-auto"
-        />
-        <figcaption class="text-sm mt-2 text-gray-500">Light Brown Apple Moth</figcaption>
-      </figure>
-    </div>
-  </div>
-
+  <Intro />
+  <HafermanCarpet />
+  <ErdosNumber />
+  <LBAM />
 </section>
