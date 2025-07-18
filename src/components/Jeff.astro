@@ -1,16 +1,43 @@
 ---
-// src/components/sections/About.astro
 ---
-<section id="about">
-  <h2>About Jeff Haferman</h2>
-  <article>
-    <h3>Haferman Carpet</h3>
-    <p>This is the “Haferman Carpet” by Jeff Haferman. It is a fractal I put together as part of a homework problem when I was an undergraduate at the University of Chicago, probably around 1984. There is a nice description of this fractal at Wolfram Mathworld. My professor at the time was Jeffrey Shallit. A colorized version of the carpet appears on the cover of the book <em>Automatic Sequences</em> by Allouche and Shallit. For the very mathematically inclined, there is an entry on the Haferman Carpet in <em>The Online Encyclopedia of Integer Sequences</em>.</p>
+<section id="about" class="max-w-3xl mx-auto px-4 py-12">
+  <!-- Portrait -->
+  <img
+    src="/jeff-haferman-768x768.jpg"
+    alt="Jeff Haferman"
+    class="rounded-full mx-auto mb-8 w-40 h-40 object-cover shadow-lg"
+  />
 
-    <h3>Erdös Number</h3>
-    <p>My Erdös Number is 4 (I co-authored a paper with Benjamin Kedem, who co-authored with Eric V. Slud, who co-authored with Robert W. Chen, who co-authored with Paul Erdös). I do not yet have an Erdös–Bacon number. My <a href="https://scholar.google.com">Google Scholar</a> citations page lists most of my academic writings. <a href="/CV.pdf">Here is a link to my CV.</a></p>
+  <h2 class="text-3xl font-bold text-center mb-10">About Jeff Haferman</h2>
 
-    <h3>Light Brown Apple Moth (LBAM)</h3>
-    <p>The “Light Brown Apple Moth” (LBAM) controversy is described in this <a href="https://en.wikipedia.org/wiki/Light_Brown_Apple_Moth">Wikipedia article</a>. My short (and perhaps biased) account: the U.S. EPA and California Department of Food and Agriculture believed the LBAM would infest California and destroy crops. Aerial spraying of a supposedly “non‑toxic” pesticide was authorized, and two sprayings took place in late 2007 over populated areas in Monterey County. I co‑wrote a paper with Dr. Dennis Knepp showing that the number of small particles in the spray was a health hazard. The CDFA lost a couple of lawsuits and abandoned the program, and, to date, there has been no significant crop damage from the LBAM. A PDF of our analysis (and related correspondence) is archived <a href="/LBAM-analysis.pdf">here</a>.</p>
-  </article>
-</section>
+  <article class="space-y-10">
+
+    <section>
+      <h3 class="text-2xl font-semibold mb-2">Haferman Carpet</h3>
+      <img
+        src="/haferman-carpet5-2.gif"
+        alt="Haferman Carpet fractal"
+        class="my-4 mx-auto rounded-lg shadow-lg w-full max-w-md"
+      />
+      <p>
+        This is the “Haferman Carpet” by Jeff Haferman. It is a fractal I put together as part of a homework problem when I was an undergraduate at the University of Chicago, probably around 1984. There is a nice description of this fractal at <a href="https://mathworld.wolfram.com/HafermanCarpet.html" class="text-blue-600 underline">Wolfram Mathworld</a>. My professor at the time was Jeffrey Shallit. A colorized version of the carpet appears on the cover of the book <em>Automatic Sequences</em> by Allouche and Shallit. For the very mathematically inclined, there is an entry on the Haferman Carpet in <a href="https://oeis.org" class="text-blue-600 underline">The Online Encyclopedia of Integer Sequences</a>.
+      </p>
+    </section>
+
+    <section>
+      <h3 class="text-2xl font-semibold mb-2">Erdös Number</h3>
+      <figure class="my-4 text-center">
+        <img
+          src="/kevin-bacon-med-300x265.png"
+          alt="Kevin Bacon"
+          class="mx-auto rounded shadow w-48"
+        />
+        <figcaption class="text-sm mt-2 text-gray-500">Still working on my Erdös-Bacon number…</figcaption>
+      </figure>
+      <p>
+        My Erdös Number is 4 (I co-authored a paper with Benjamin Kedem, who co-authored with Eric V. Slud, who co-authored with Robert W. Chen, who co-authored with Paul Erdös). I do not yet have an Erdös–Bacon number. My <a href="https://scholar.google.com" class="text-blue-600 underline">Google Scholar</a> citations page lists most of my academic writings. <a href="/CV.pdf" class="text-blue-600 underline">Here is a link to my CV.</a>
+      </p>
+    </section>
+
+    <section>
+      <h3 class="text-2xl font-semibold mb-2">Light Brown Apple Moth (LBAM)</h3>
