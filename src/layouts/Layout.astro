@@ -21,6 +21,27 @@ const { title } = Astro.props;
         <meta name="generator" content={Astro.generator} />
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="preload" as="font" type="font/woff2" href={interWoff2} crossorigin />
+
+        <!-- ✅ Inline critical CSS -->
+        <style>
+            html {
+                font-family: 'InterVariable', sans-serif;
+            }
+            body {
+                margin: 0;
+            }
+        </style>
+
+        <!-- ✅ Load global CSS asynchronously -->
+        <link
+            rel="preload"
+            href="/_astro/index.CLsCMFd7.css"
+            as="style"
+            onload="this.onload=null;this.rel='stylesheet'"
+        />
+        <noscript>
+            <link rel="stylesheet" href="/_astro/index.CLsCMFd7.css" />
+        </noscript>
     </head>
     <body class="antialiased text-white bg-complementary">
         <div class="flex flex-col min-h-screen px-6 bg-noise sm:px-12">
