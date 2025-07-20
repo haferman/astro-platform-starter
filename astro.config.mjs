@@ -3,12 +3,9 @@ import react from '@astrojs/react';
 import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
+  integrations: [react()],
   vite: {
     plugins: [tailwindcss()]
   },
-  integrations: [react()],
-  output: "static",
-  experimental: {
-    inlineStyles: 'always'
-  }
+  output: 'static'
 });
