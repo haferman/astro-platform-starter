@@ -5,6 +5,12 @@ import interWoff2 from '@fontsource-variable/inter/files/inter-latin-wght-normal
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 
+// Dynamically find the hashed CSS file
+const cssFiles = import.meta.glob('/_astro/*.css', { eager: true });
+const cssHref = Object.keys(cssFiles).find(href =>
+  href.includes('/index.') && href.endsWith('.css')
+);
+
 interface Props {
     title: string;
 }
@@ -14,42 +20,47 @@ const { title } = Astro.props;
 
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <title>{title}</title>
-        <meta name="viewport" content="width=device-width" />
-        <meta name="generator" content={Astro.generator} />
-        <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link rel="preload" as="font" type="font/woff2" href={interWoff2} crossorigin />
+  <head>
+    <meta charset="UTF-8" />
+    <title>{title}</title>
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="preload" as="font" type="font/woff2" href={interWoff2} crossorigin />
 
-        <!-- ✅ Inline critical CSS -->
-        <style>
-            html {
-                font-family: 'InterVariable', sans-serif;
-            }
-            body {
-                margin: 0;
-            }
-        </style>
+    <!-- ✅ Inline critical CSS -->
+    <style>
+      html {
+        font-family: 'InterVariable', sans-serif;
+      }
+      body {
+        margin: 0;
+      }
+    </style>
 
-        <!-- ✅ Load global CSS asynchronously -->
+    <!-- ✅ Dynamically preload and apply latest CSS -->
+    {cssHref && (
+      <>
         <link
-            rel="preload"
-            href="/_astro/index.CLsCMFd7.css"
-            as="style"
-            onload="this.onload=null;this.rel='stylesheet'"
+          rel="preload"
+          href={cssHref}
+          as="style"
+          onload="this.onload=null;this.rel='stylesheet'"
         />
         <noscript>
-            <link rel="stylesheet" href="/_astro/index.CLsCMFd7.css" />
+          <link rel="stylesheet" href={cssHref} />
         </noscript>
-    </head>
-    <body class="antialiased text-white bg-complementary">
-        <div class="flex flex-col min-h-screen px-6 bg-noise sm:px-12">
-            <div class="flex flex-col w-full max-w-5xl mx-auto grow">
-                <Header />
-                <main class="grow"><slot /></main>
-                <Footer />
-            </div>
-        </div>
-    </body>
+      </>
+    )}
+  </head>
+
+  <body class="antialiased text-white bg-complementary">
+    <div class="flex flex-col min-h-screen px-6 bg-noise sm:px-12">
+      <div class="flex flex-col w-full max-w-5xl mx-auto grow">
+        <Header />
+        <main class="grow"><slot /></main>
+        <Footer />
+      </div>
+    </div>
+  </body>
 </html>
