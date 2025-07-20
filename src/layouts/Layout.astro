@@ -23,7 +23,8 @@ const { title } = Astro.props;
   <head>
     <meta charset="UTF-8" />
     <title>{title}</title>
-    <meta name="viewport" content="width=device-width" />
+    <!-- ✅ FIXED: Proper viewport tag -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="generator" content={Astro.generator} />
     <link rel="icon" href="/favicon.ico" sizes="any" />
     <link rel="preload" as="font" type="font/woff2" href={interWoff2} crossorigin />
