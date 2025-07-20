@@ -8,7 +8,7 @@ export default defineConfig({
     plugins: [tailwindcss()]
   },
   integrations: [react()],
-  adapter: staticAdapter(),
+  adapter: static(),
   experimental: {
     inlineStyles: 'always'
   }
