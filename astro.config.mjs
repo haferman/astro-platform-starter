@@ -1,7 +1,7 @@
 import { defineConfig } from 'astro/config';
 import react from '@astrojs/react';
 import tailwindcss from '@tailwindcss/vite';
-import staticAdapter from '@astrojs/adapter-static';
+import static from '@astrojs/static';
 
 export default defineConfig({
   vite: {
